@@ -1,0 +1,112 @@
+{% extends "main.html" %}
+{% block content %}
+<main>
+    <div class="container-fluid">
+        <h1 class="mt-4">Report</h1>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item"><a href="/home">Dashboard</a></li>
+            <li class="breadcrumb-item active">Report</li>
+        </ol>
+        <!-- <div class="card mb-4">
+            <div class="card-body">
+
+            </div>
+        </div> -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <i class="fas fa-table mr-1"></i>
+                Report
+            </div>
+            <div class="card-body">
+                <div class="form-group row">
+                    <!-- <label for="example-date-input" class="col-2 col-form-label">Date</label> -->
+                    <div class="col-10">
+                      <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <!-- <label for="example-month-input" class="col-2 col-form-label">Month</label> -->
+                    <div class="col-10">
+                      <input class="form-control" type="month" value="2011-08" id="example-month-input">
+                      <br>
+                      <button type="button" class="btn btn-danger">Submit</button>
+                      <br>  <br>
+                      <div class="row">
+                        <div class="col-xl-6">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <i class="fas fa-chart-area mr-1"></i>
+                                     Chart Device
+                                </div>
+                                <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <i class="fas fa-chart-area mr-1"></i>
+                                        Chart Device
+                                </div>
+                                <div class="card-body"><canvas id="myAreaChart1" width="100%" height="40"></canvas></div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <i class="fas fa-chart-area mr-1"></i>
+                                        Chart Device
+                                </div>
+                                <div class="card-body"><canvas id="myAreaChart2" width="100%" height="40"></canvas></div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <i class="fas fa-chart-area mr-1"></i>
+                                        Chart Device
+                                </div>
+                                <div class="card-body"><canvas id="myAreaChart3" width="100%" height="40"></canvas></div>
+                            </div>
+                        </div>
+                      <br>
+                      <div class="table-responsive">
+                        <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                
+                                <tr>
+                                    <th>IP Address</th>
+                                    <th>Hostname</th>
+                                    <th>Uptime</th>
+                                    <th>Update Time</th>
+                                </tr>
+                               
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <th>IP Address</th>
+                                    <th>Hostname</th>
+                                    <th>Uptime</th>
+                                    <th>Update Time</th>
+                                   
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                {% for qry in data %} 
+                                <tr>
+                                    <td><a href="#">{{ qry.ip_hostname }}</a></td>
+                                    <td>{{ qry.hostname }}</td>
+                                    <td>{{ qry.uptime }}</td>
+                                    <td>{{ qry.update_time }}</td>
+                                </tr>
+                                {% endfor %}
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
