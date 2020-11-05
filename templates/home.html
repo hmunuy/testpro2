@@ -88,7 +88,7 @@
 
  
 </div>
-
+<!--TABLE 1 -->
 <div class="card shadow mb-4">
   <div class="card-header py-3">
     <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
@@ -126,6 +126,43 @@
       </table>
     </div>
   </div>
+  <!-- END TABLE 1 -->
+  <!--TABLE 1 -->
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+    <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Hostname</th>
+            <th>CPU Temp (°C)</th>
+            <th>Ram Usage (Byte)</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th>Hostname</th>
+            <th>CPU Temp (°C)</th>
+            <th>Ram Usage (Byte)</th>
+          </tr>
+        </tfoot>
+        <tbody>
+          {% for x in hostname %}
+              <tr>
+                  <td>{{x.hostname}}</td>
+                  <td><a>{{x.cpu_temp}} °C </a></td>
+                  <td><a>{{x.ram_usage }} Byte</a></td>
+               </tr>
+           {% endfor %}
+         
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- END TABLE 1 -->
 </div>
 
 {% endblock %}
