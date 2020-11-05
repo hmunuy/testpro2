@@ -7458,17 +7458,13 @@ button.bg-dark:focus {
 }
 
 .justify-content-center {
+  margin-top: 30%;
   -webkit-box-pack: center !important;
   -ms-flex-pack: center !important;
   justify-content: center !important;
 }
 
-.justify-content-center1 {
-  top:50%;
-  left:50%;
-  margin-left:-100px;
-  margin-top:-50px;
-}
+
 
 .justify-content-between {
   -webkit-box-pack: justify !important;
