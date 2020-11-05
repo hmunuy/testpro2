@@ -156,12 +156,7 @@ def wlc_ap(request):
 
 
 def main1(request):
-    if request.session.has_key('username'):
-       username = request.session.GET['username']
-       return render(request, 'main.html', {"username" : username})
-    else:
-       return render(request, 'index.html', {})
-    return render(request,'home.html')
+    username = request.session['username']
 
 
   
