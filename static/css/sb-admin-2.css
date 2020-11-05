@@ -7464,6 +7464,7 @@ button.bg-dark:focus {
 }
 
 .justify-content-center1 {
+  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
