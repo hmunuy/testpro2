@@ -155,8 +155,9 @@ def wlc_ap(request):
     else : return redirect('monitor.html')
 
 
-def main1(request):
+def main(request):
     username = request.session['username']
+    return render(request, 'main.html',{'username':username})
 
 
   
@@ -245,6 +246,7 @@ def login(request):
        msg = ("เข้าระบบโดย :"+username)
        r = requests.post(url, headers=headers , data = {'message':msg})
        return redirect('home')
+       return redirect('/main1/')  
     else :
         messages.info(request,'ไม่พบข้อมูล')
         msg = ("พยายามเข้าระบบโดย :"+username)
