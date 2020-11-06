@@ -155,7 +155,7 @@ def wlc_ap(request):
     else : return redirect('monitor.html')
 
 
-def main(request):
+def main1(request):
     username = request.session['username']
     return render(request, 'main.html',{'username':username})
 
