@@ -18,8 +18,14 @@
                     <div class="card-body">
                 <p class="card-text">รายละเอียดผู้ใช้งานระบบ</p>
                 {% for qry in data %} 
+                <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                        <p class="card-text">{{qry.username}}</p>
+                    </div>
+                  </div>
                
-                    <p class="card-text">{{qry.username}}</p>
+                   
                   
                     <p class="card-text">{{qry.first_name}}</p>
                  
