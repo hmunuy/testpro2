@@ -252,7 +252,7 @@ def login(request):
         msg = ("พยายามเข้าระบบโดย :"+username)
         r = requests.post(url, headers=headers , data = {'message':msg})
         return redirect('/')
-    
+
 
 def logout(request):
     auth.logout(request)
