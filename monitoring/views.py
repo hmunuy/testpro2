@@ -184,11 +184,11 @@ def topology_serach(request):
         return redirect('/infodevice/',serach)
     #infodevice(serach)
 
-def register(request):
+def profile(request):
     username = request.session['username']
     data = list(User.objects.filter(username=username).distinct())
     
-    return render(request,'register.html',{'data':data})
+    return render(request,'profile.html',{'data':data})
 
 def report(request):
     data1 = list(get_uptime.objects.all().distinct())

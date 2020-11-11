@@ -27,7 +27,7 @@ urlpatterns = [
     path('topology/', views.topology, name='page3'),
     path('infodevice/', views.infodevice, name='page4'),
     path('report/', views.report, name='report'),
-    path('register/', views.register, name='register'),
+    path('profile/', views.profile, name='profile'),
     path('registeradmin/', views.registeradmin, name='registeradmin'),
     path('addUser', views.addUser),
     path('wlc', views.wlc_ap),
