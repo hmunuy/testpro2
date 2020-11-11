@@ -3,8 +3,10 @@
 <div class="card mb-4 py-3 border-bottom-warning">
     <div class="card-body">
         {{username}}
-      <a >{{data.username}}</a>
-      <a> {{ data.first_name }}</a>
+        {% for qry in data %} 
+        <a >{{data.username}}</a>
+        <a> {{ data.first_name }}</a>
+        {% endfor %}
     </div>
   </div>
 {% endblock %}
