@@ -14,35 +14,24 @@
                         <h5 class="card-title">สวัสดีคุณ : {{username}}</h5>
                     </div>
                   </div>
+                  <div class="card mb-4 py-3 border-bottom-info">
+                    <div class="card-body">
                 <p class="card-text">รายละเอียดผู้ใช้งานระบบ</p>
                 {% for qry in data %} 
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="basic-addon3">Username</span>
-                    </div>
+               
                     <p class="card-text">{{qry.username}}</p>
-                  </div>
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="basic-addon3">First Name</span>
-                    </div>
+                  
                     <p class="card-text">{{qry.first_name}}</p>
-                  </div>
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="basic-addon3">Last Name</span>
-                    </div>
+                 
                     <p class="card-text">{{qry.last_name}}</p>
-                  </div>
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="basic-addon3">Email</span>
-                    </div>
+                 
                     <p class="card-text">{{qry.email}}</p>
-                  </div>
+                  
                 
                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                 {% endfor %}
+                </div>
+                </div>
                 
               </div>
             </div>
