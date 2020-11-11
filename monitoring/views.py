@@ -77,7 +77,7 @@ def home(request):
     sum_out1 = str(cal_out)
     # x = data.query
     if username != "" :
-       return render(request,'home.html',{'data':data,'data2':x_sum,'hostname':data3,'sum_in':sum_in1,'sum_out':sum_out1})
+       return render(request,'home.html',{'data':data,'data2':x_sum,'hostname':data3,'sum_in':sum_in1,'sum_out':sum_out1,'username':username})
     else:
         return render(request,'registeradmin.html')
            
@@ -97,8 +97,8 @@ def home(request):
     #     r = requests.post(url, headers=headers , data = {'message':msg})
     #     return render(request,'index.html')
 def registeradmin(request):
-    
-    return render(request,'registeradmin.html')
+    username = request.session['username']
+    return render(request,'registeradmin.html',{'username':username})
 
 def monitor(request):
     username = request.session['username']
@@ -121,7 +121,7 @@ def monitor(request):
     
         
     if username != "" :
-       return render(request,'monitor.html',{'data':data,'data2':x_sum,'data3':data3,'data4':data4}) 
+       return render(request,'monitor.html',{'data':data,'data2':x_sum,'data3':data3,'data4':data4,'username':username}) 
        
     else:
         return render(request,'registeradmin.html')
