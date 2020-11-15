@@ -123,7 +123,7 @@ def editadmin1(request):
     
 def deladmin(request,):
     if request.method == 'GET':
-        username = request.POST['username']
+        username = request.GET['username']
         User.objects.filter(username=username).delete()
     
         return render(request,'user.html',{'username':username})
