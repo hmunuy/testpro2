@@ -128,8 +128,8 @@ def deladmin(request):
         User.objects.filter(username=username).delete()
         msg = ("คุณ : "+username1+" ได้ทำการลบ : "+ username +" สำเร็จกรุณาตรวจสอบ")
         r = requests.post(url, headers=headers , data = {'message':msg})
-        messages.info(request,'ลงทะเบียนสำเร็จ')
-        messages.info(request,'ลงทะเบียนสำเร็จ')
+        messages.info(request,'ลบผู้ดูเเลสำเร็จ')
+        
     
         return redirect('/user/') 
 
