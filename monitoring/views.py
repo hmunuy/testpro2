@@ -156,7 +156,7 @@ def monitor(request):
         sum_user = sum_user + num_user
     x_sum = str(sum_user)
 
-    data3 = get_clients_detail.objects.order_by('-update_time')[:x_sum]
+    data3 = get_clients_detail.objects.order_by('-update_time')[:int(x_sum)]
         
     if username != "" :
        return render(request,'monitor.html',{'data':data,'data2':x_sum,'data3':data3,'data4':data4,'username':username}) 
