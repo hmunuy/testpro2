@@ -126,7 +126,7 @@ def deladmin(request):
         username = request.POST['username']
         User.objects.filter(username=username).delete()
     
-        return render(request,'user.html',{'username':username})
+        return render(request,'user.html')
 
 def usertable(request):
     username = request.session['username']
