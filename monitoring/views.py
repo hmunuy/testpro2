@@ -131,7 +131,7 @@ def deladmin(request):
 def usertable(request):
     username = request.session['username']
     user = User.objects.all()
-    return render(request,'user.html',{'data':user})
+    return render(request,'user.html',{'data':user,'username':username})
 
 def monitor(request):
     username = request.session['username']
