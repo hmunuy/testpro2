@@ -146,7 +146,7 @@ def monitor(request):
     #hostname = ['WLC_FITM1','WLC_FITM2','WLC_FITM3']
     #data2 = snmp_ap.objects.all().filter(hostname='WLC_FITM1').order_by('-id')
     data2 = get_clients.objects.order_by('-id')[:3]
-    data3 = get_clients_detail.objects.order_by('-update_time')[:data2]
+    
     data4 = get_traffic.objects.order_by('-id')[:589]
     
     sum_user = 0
@@ -156,7 +156,7 @@ def monitor(request):
         sum_user = sum_user + num_user
     x_sum = str(sum_user)
 
-    
+    data3 = get_clients_detail.objects.order_by('-update_time')[:x_sum]
         
     if username != "" :
        return render(request,'monitor.html',{'data':data,'data2':x_sum,'data3':data3,'data4':data4,'username':username}) 
