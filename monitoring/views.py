@@ -146,7 +146,7 @@ def monitor(request):
     #hostname = ['WLC_FITM1','WLC_FITM2','WLC_FITM3']
     #data2 = snmp_ap.objects.all().filter(hostname='WLC_FITM1').order_by('-id')
     data2 = get_clients.objects.order_by('-id')[:3]
-    data3 = get_clients_detail.objects.order_by('-id')
+    data3 = get_clients_detail.objects.order_by('-update_time')
     data4 = get_traffic.objects.order_by('-id')[:589]
     
     sum_user = 0
