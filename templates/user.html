@@ -44,7 +44,8 @@
               <td>{{ qry.email  }}</td>
               <form action="/deladmin/{{ qry.username  }}" class="user" method="POST">
                 {% csrf_token %} 
-              <td><button id="username" value="{{ qry.username  }}"  class="btn btn-danger btn-circle btn-lg">
+                <input type="hidden" name="username" value="{{qry.username}}" />
+              <td><button   class="btn btn-danger btn-circle btn-lg">
                 <i class="fas fa-trash"></i>
               </button></td>
               </form>
