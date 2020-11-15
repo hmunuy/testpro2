@@ -29,7 +29,7 @@ urlpatterns = [
     path('report/', views.report, name='report'),
     path('profile/', views.profile, name='profile'),
     path('editadmin/', views.editadmin, name='editadmin'),
-    # path('editadmin1/', views.editadmin, name='editadmin'),
+    path('editadmin1/', views.editadmin, name='editadmin'),
     path('registeradmin/', views.registeradmin, name='registeradmin'),
     # path('deladmin', views.deladmin),
     path('addUser', views.addUser),
