@@ -43,9 +43,10 @@
               <td>{{ qry.last_name  }}</td>
               <td>{{ qry.email  }}</td>
               <form action="/deladmin/{{qry.username}}/" class="user" method="GET">
-              <td><button type="submit"  class="btn btn-danger btn-circle btn-lg">
+              <td><button  class="btn btn-danger btn-circle btn-lg">
                 <i class="fas fa-trash"></i>
               </button></td>
+              </form>
           </tr>
           {% endfor %}
          
