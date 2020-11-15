@@ -103,42 +103,42 @@ def editadmin(request):
     username = request.session['username']
     data = User.objects.all().filter(username= username)
     return render(request,'editadmin.html',{'data':data,'username':username})
-def editadmin1(request):
-    username = request.session['username']
-    username1 = request.POST['username']
-    firstname = request.POST['firstname']
-    lastname = request.POST['lastname']
-    email = request.POST['email']
-    password = request.POST['password']
-    repassword = request.POST['repassword']
+# def editadmin1(request):
+#     username = request.session['username']
+#     username1 = request.POST['username']
+#     firstname = request.POST['firstname']
+#     lastname = request.POST['lastname']
+#     email = request.POST['email']
+#     password = request.POST['password']
+#     repassword = request.POST['repassword']
 
-    if password==repassword :
-        if User.objects.filter(username=username1).exists():
-            messages.info(request,'UserName นีมีคนใช้แล้ว')
-            return redirect('/registeradmin/')
-        elif User.objects.filter(email=email).exists():
-            messages.info(request,'Email นี้เคยลงทะเบียนแล้ว')
-            return redirect('/registeradmin/')
-        else :
-            user =  User.objects.create_user(
-                username = username1,
-                password = password,
-                email = email,
-                first_name = firstname,
-                last_name = lastname
-                )
-            user.save()
-            msg = ("คุณ : "+username1+" ถูกลงทะเบียนโดย : "+username+" เรียบร้อยกรุณาตรวจสอบ")
-            r = requests.post(url, headers=headers , data = {'message':msg})
-            messages.info(request,'ลงทะเบียนสำเร็จ')
-            return redirect('/registeradmin/')  
-    else  :
-         messages.info(request,'รหัสผ่านไม่ตรงกัน')
-         return redirect('/registeradmin/')   
+#     if password==repassword :
+#         if User.objects.filter(username=username1).exists():
+#             messages.info(request,'UserName นีมีคนใช้แล้ว')
+#             return redirect('/registeradmin/')
+#         elif User.objects.filter(email=email).exists():
+#             messages.info(request,'Email นี้เคยลงทะเบียนแล้ว')
+#             return redirect('/registeradmin/')
+#         else :
+#             user =  User.objects.create_user(
+#                 username = username1,
+#                 password = password,
+#                 email = email,
+#                 first_name = firstname,
+#                 last_name = lastname
+#                 )
+#             user.save()
+#             msg = ("คุณ : "+username1+" ถูกลงทะเบียนโดย : "+username+" เรียบร้อยกรุณาตรวจสอบ")
+#             r = requests.post(url, headers=headers , data = {'message':msg})
+#             messages.info(request,'ลงทะเบียนสำเร็จ')
+#             return redirect('/registeradmin/')  
+#     else  :
+#          messages.info(request,'รหัสผ่านไม่ตรงกัน')
+#          return redirect('/registeradmin/')   
     
-def deladmin(request):
+# def deladmin(request):
     
-    return render(request,'editadmin.html',{'data':data,'username':username})
+#     return render(request,'editadmin.html',{'data':data,'username':username})
 
 def monitor(request):
     username = request.session['username']
