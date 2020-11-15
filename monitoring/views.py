@@ -131,7 +131,7 @@ def deladmin(request):
         messages.info(request,'ลงทะเบียนสำเร็จ')
         messages.info(request,'ลงทะเบียนสำเร็จ')
     
-        return redirect('/usertable/') 
+        return redirect('/user/') 
 
 def usertable(request):
     username = request.session['username']
