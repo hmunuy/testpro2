@@ -99,6 +99,9 @@ def home(request):
 def registeradmin(request):
     username = request.session['username']
     return render(request,'registeradmin.html',{'username':username})
+def editadmin(request):
+    username = request.session['username']
+    return render(request,'editadmin.html',{'username':username})
 
 def monitor(request):
     username = request.session['username']
