@@ -43,9 +43,9 @@
               <td>{{ qry.last_name  }}</td>
               <td>{{ qry.email  }}</td>
               <form action="/deladmin" class="user" method="GET">
-              <td><a href="{% url 'deladmin' %}?id={{ qry.username }}"><button  class="btn btn-danger btn-circle btn-lg">
+              <td><button  class="btn btn-danger btn-circle btn-lg">
                 <i class="fas fa-trash"></i>
-              </button></a></td>
+              </button></td>
           </tr>
           {% endfor %}
          
