@@ -121,8 +121,9 @@ def editadmin1(request):
         return redirect('/profile/')  
       
     
-def deladmin(request,username):
+def deladmin(request,):
     if request.method == 'GET':
+        username = request.POST['username']
         User.objects.filter(username=username).delete()
     
         return render(request,'user.html',{'username':username})
