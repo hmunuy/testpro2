@@ -21,7 +21,7 @@ from django.http import HttpResponse
 
 # Create your views here.
 url = 'https://notify-api.line.me/api/notify'
-token = '7yoadgV43LMS9yFXLDlhZEDko8sjZwiA7mMjfjMcmhC'
+token = 'NuuUuOmWepLTjLylkfdFwppgMhxjTeNiF4wE6Kdg70a'
 headers = {'content-type':'application/x-www-form-urlencoded','Authorization':'Bearer '+token}
 
 #Query Data Host_snmp show in table on home.html page
