@@ -17,8 +17,8 @@ class get_interface(models.Model):
 class get_cpu_ram(models.Model):
     ip_hostname = models.CharField(max_length=200)
     hostname = models.CharField(max_length=200)
-    cpu_temp = models.IntegerField()
-    ram_usage = models.IntegerField()
+    cpu_temp = models.BigIntegerField()
+    ram_usage = models.BigIntegerField()
     update_time = models.CharField(max_length=200)
 
 class get_uptime(models.Model):
@@ -38,7 +38,7 @@ class get_traffic(models.Model):
 class get_clients(models.Model):
     ip_hostname = models.CharField(max_length=200)
     hostname = models.CharField(max_length=200)
-    clients = models.IntegerField()
+    clients = models.BigIntegerField()
     update_time = models.CharField(max_length=200)
 
 class get_clients_detail(models.Model):
