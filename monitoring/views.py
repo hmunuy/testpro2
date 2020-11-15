@@ -101,7 +101,8 @@ def registeradmin(request):
     return render(request,'registeradmin.html',{'username':username})
 def editadmin(request):
     username = request.session['username']
-    return render(request,'editadmin.html',{'username':username})
+    data = User.objects.filter(username)
+    return render(request,'editadmin.html',{'data':data,'username':username})
 
 def monitor(request):
     username = request.session['username']
