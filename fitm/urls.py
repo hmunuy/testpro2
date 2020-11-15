@@ -31,6 +31,7 @@ urlpatterns = [
     path('editadmin/', views.editadmin, name='editadmin'),
     path('editadmin1', views.editadmin1, ),
     path('registeradmin/', views.registeradmin, name='registeradmin'),
+    path('user/', views.usertable, name='usertable'),
     # path('deladmin', views.deladmin),
     path('addUser', views.addUser),
     path('wlc', views.wlc_ap),

@@ -125,6 +125,11 @@ def editadmin1(request):
     
 #     return render(request,'editadmin.html',{'data':data,'username':username})
 
+def usertable(request):
+    username = request.session['username']
+    user = User.objects.all()
+    return render(request,'user.html',{'user':data})
+
 def monitor(request):
     username = request.session['username']
     data = get_interface.objects.order_by('-id')[:589]
