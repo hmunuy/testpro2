@@ -126,7 +126,7 @@ def deladmin(request):
         username1 = request.session['username']
         username = request.POST['username']
         User.objects.filter(username=username).delete()
-        msg = ("คุณ : "+username1+" ได้ทำการลบ : "+ username +" เรียบร้อยกรุณาตรวจสอบ")
+        msg = ("คุณ : "+username1+" ได้ทำการลบ : "+ username +" สำเร็จกรุณาตรวจสอบ")
         r = requests.post(url, headers=headers , data = {'message':msg})
         messages.info(request,'ลงทะเบียนสำเร็จ')
         messages.info(request,'ลงทะเบียนสำเร็จ')
@@ -257,7 +257,7 @@ def addUser(request):
                 last_name = lastname
                 )
             user.save()
-            msg = ("คุณ : "+username1+" ถูกลงทะเบียนโดย : "+username+" เรียบร้อยกรุณาตรวจสอบ")
+            msg = ("คุณ : "+username1+" ถูกลงทะเบียนโดย : "+username+" สำเร็จกรุณาตรวจสอบ")
             r = requests.post(url, headers=headers , data = {'message':msg})
             messages.info(request,'ลงทะเบียนสำเร็จ')
             return redirect('/registeradmin/')  
