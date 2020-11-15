@@ -129,6 +129,7 @@ def deladmin(request):
         msg = ("คุณ : "+username1+" ได้เปลี่ยนลบ : "+ username +" เรียบร้อยกรุณาตรวจสอบ")
         r = requests.post(url, headers=headers , data = {'message':msg})
         messages.info(request,'ลงทะเบียนสำเร็จ')
+        messages.info(request,'ลงทะเบียนสำเร็จ')
     
         return render(request,'user.html')
 
