@@ -123,8 +123,12 @@ def editadmin1(request):
     
 def deladmin(request):
     if request.method == 'POST':
+        username1 = request.session['username']
         username = request.POST['username']
         User.objects.filter(username=username).delete()
+        msg = ("คุณ : "+username1+" ได้เปลี่ยนลบ : "+ username +" เรียบร้อยกรุณาตรวจสอบ")
+        r = requests.post(url, headers=headers , data = {'message':msg})
+        messages.info(request,'ลงทะเบียนสำเร็จ')
     
         return render(request,'user.html')
 
