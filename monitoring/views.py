@@ -230,7 +230,7 @@ def profile(request):
 
 def addnew(request):
     username = request.session['username']
-    
+     messages.info(request,'ลงทะเบียนสำเร็จ')
     
     return render(request,'addnew.html',{'username':username})
 
