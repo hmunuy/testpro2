@@ -11592,19 +11592,19 @@ a:focus {
 }
 
 .bg-login-image {
-  background: url("{% static 'images/img-01.png' %}");
+  background: url("http://fitm-monitoring.app.ruk-com.cloud/static/images/img-01.png");
   background-position: center;
   background-size: cover;
 }
 
 .bg-register-image {
-  background: url("{% static 'images/img-01.png' %}");
+  background: url("http://fitm-monitoring.app.ruk-com.cloud/static/images/img-01.png");
   background-position: center;
   background-size: cover;
 }
 
 .bg-password-image {
-  background: url("{% static 'images/img-01.png' %}");
+  background: url("http://fitm-monitoring.app.ruk-com.cloud/static/images/img-01.png");
   background-position: center;
   background-size: cover;
 }
