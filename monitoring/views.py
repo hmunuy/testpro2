@@ -128,7 +128,7 @@ def editadmin1(request):
 def usertable(request):
     username = request.session['username']
     user = User.objects.all()
-    return render(request,'user.html',{'user':data})
+    return render(request,'user.html',{'data':user})
 
 def monitor(request):
     username = request.session['username']
