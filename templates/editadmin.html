@@ -21,7 +21,7 @@
               </div>
               <form action="/addUser" class="user" method="POST">
                 {% csrf_token %} 
-                {% for qry in data %}
+                {% for data in data %}
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
                     <input type="text" name="firstname" class="form-control form-control-user" id="exampleFirstName" placeholder="{{data.first_name}}" value="{{data.first_name}}">
