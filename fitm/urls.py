@@ -32,6 +32,7 @@ urlpatterns = [
     path('editadmin1', views.editadmin1, ),
     path('registeradmin/', views.registeradmin, name='registeradmin'),
     path('user/', views.usertable, name='usertable'),
+    path('addnew/', views.addnew, name='addnew'),
     path('deladmin', views.deladmin,name="deladmin"),
     # url(r'^deladmin/(?P<username>\w+)/$', views.deladmin,name="deladmin"), 
     path('addUser', views.addUser),

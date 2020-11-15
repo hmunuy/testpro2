@@ -228,6 +228,12 @@ def profile(request):
     
     return render(request,'profile.html',{'data':data,'username':username})
 
+def addnew(request):
+    username = request.session['username']
+    
+    
+    return render(request,'addnew.html',{'username':username})
+
 def report(request):
     data1 = list(get_uptime.objects.all().distinct())
     return render(request,'report.html',{'data':data1})
@@ -260,7 +266,7 @@ def addUser(request):
             msg = ("คุณ : "+username1+" ถูกลงทะเบียนโดย : "+username+" สำเร็จกรุณาตรวจสอบ")
             r = requests.post(url, headers=headers , data = {'message':msg})
             messages.info(request,'ลงทะเบียนสำเร็จ')
-            return redirect('/registeradmin/')  
+            return redirect('/addnew/')  
     else  :
          messages.info(request,'รหัสผ่านไม่ตรงกัน')
          return redirect('/registeradmin/')   
