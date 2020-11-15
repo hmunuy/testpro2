@@ -42,8 +42,8 @@
               <td>{{ qry.first_name  }}</td>
               <td>{{ qry.last_name  }}</td>
               <td>{{ qry.email  }}</td>
-              <form action="/deladmin/{{qry.username}}/" class="user" method="GET">
-              <td><button  class="btn btn-danger btn-circle btn-lg">
+              <form action="/deladmin" class="user" method="GET">
+              <td><button id="username" value="{{ qry.username  }}"  class="btn btn-danger btn-circle btn-lg">
                 <i class="fas fa-trash"></i>
               </button></td>
               </form>
