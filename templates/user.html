@@ -14,7 +14,7 @@
     <h6 class="m-0 font-weight-bold text-primary">Uptime</h6>
   </div>
   <div class="card-body">
-    <form  class="user" method="get">
+    
     <div class="table-responsive">
       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
@@ -42,16 +42,17 @@
               <td>{{ qry.first_name  }}</td>
               <td>{{ qry.last_name  }}</td>
               <td>{{ qry.email  }}</td>
+              <form action="/user/{{ qry.username }}/" class="user" method="get">
               <td><button data-toggle="modal" data-target="#delete" class="btn btn-danger btn-circle btn-lg">
                 <i class="fas fa-trash"></i>
-              </button></td>
+              </button></td></form>
           </tr>
           {% endfor %}
          
         </tbody>
       </table>
     </div>
-  </form>
+  
   </div>
   </div>
   <!-- END TABLE  -->
