@@ -103,6 +103,9 @@ def editadmin(request):
     username = request.session['username']
     data = User.objects.all().filter(username= username)
     return render(request,'editadmin.html',{'data':data,'username':username})
+def deladmin(request):
+    
+    return render(request,'editadmin.html',{'data':data,'username':username})
 
 def monitor(request):
     username = request.session['username']

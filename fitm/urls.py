@@ -30,6 +30,7 @@ urlpatterns = [
     path('profile/', views.profile, name='profile'),
     path('editadmin/', views.editadmin, name='editadmin'),
     path('registeradmin/', views.registeradmin, name='registeradmin'),
+    path('deladmin', views.deladmin),
     path('addUser', views.addUser),
     path('wlc', views.wlc_ap),
     path('topology_serach', views.topology_serach),
